@@ -1,0 +1,35 @@
+% DuoRec* is an official-code-adapted reproduction in the shared pipeline.
+\begin{table*}[t]
+\centering
+\caption{Overall full-sort recommendation performance. Bold and underline denote the best and second-best results. DuoRec* is reproduced by adapting its official implementation to our shared pipeline. $\Delta$ is the relative improvement of StaRec over the strongest non-StaRec result.}
+\label{tab:main-results}
+\small
+\setlength{\tabcolsep}{3.6pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrrrrr}
+\toprule
+Dataset & Metric & GRU4Rec & SASRec & BERT4Rec & FMLPRec & BSARec & WEARec & DuoRec* & StaRec & $\Delta$ \\
+\midrule
+ML-1M & HR@5    & 0.1005 & 0.1374 & 0.1485 & 0.1331 & 0.1896 & 0.2083 & \underline{0.2174} & \textbf{0.2205} & 1.43\% \\
+ML-1M & HR@10   & 0.1657 & 0.2137 & 0.2336 & 0.2093 & 0.2791 & 0.2945 & \underline{0.3078} & \textbf{0.3088} & 0.32\% \\
+ML-1M & NDCG@5  & 0.0619 & 0.0873 & 0.0983 & 0.0861 & 0.1275 & 0.1414 & \underline{0.1490} & \textbf{0.1504} & 0.94\% \\
+ML-1M & NDCG@10 & 0.0828 & 0.1116 & 0.1256 & 0.1105 & 0.1562 & 0.1692 & \underline{0.1781} & \textbf{0.1788} & 0.39\% \\
+\midrule
+Digital & HR@5    & 0.0108 & 0.0570 & 0.0612 & 0.0538 & 0.0837 & \underline{0.0838} & 0.0817 & \textbf{0.0870} & 3.82\% \\
+Digital & HR@10   & 0.0191 & 0.0770 & 0.0855 & 0.0783 & 0.1086 & \underline{0.1093} & 0.1073 & \textbf{0.1117} & 2.20\% \\
+Digital & NDCG@5  & 0.0066 & 0.0411 & 0.0453 & 0.0390 & \underline{0.0638} & 0.0632 & 0.0625 & \textbf{0.0663} & 3.92\% \\
+Digital & NDCG@10 & 0.0092 & 0.0476 & 0.0531 & 0.0469 & \underline{0.0718} & 0.0714 & 0.0708 & \textbf{0.0743} & 3.48\% \\
+\midrule
+Musical & HR@5    & 0.0265 & 0.0458 & 0.0638 & 0.0513 & 0.0734 & \underline{0.0749} & 0.0726 & \textbf{0.0766} & 2.27\% \\
+Musical & HR@10   & 0.0440 & 0.0634 & 0.0836 & 0.0669 & \underline{0.0953} & 0.0949 & 0.0917 & \textbf{0.0960} & 0.73\% \\
+Musical & NDCG@5  & 0.0177 & 0.0335 & 0.0498 & 0.0395 & 0.0599 & \underline{0.0613} & 0.0594 & \textbf{0.0623} & 1.63\% \\
+Musical & NDCG@10 & 0.0232 & 0.0392 & 0.0562 & 0.0469 & 0.0670 & \underline{0.0677} & 0.0656 & \textbf{0.0685} & 1.18\% \\
+\midrule
+Office & HR@5    & 0.0302 & 0.0548 & 0.0733 & 0.0670 & 0.0866 & 0.0885 & \underline{0.0893} & \textbf{0.0936} & 4.82\% \\
+Office & HR@10   & 0.0407 & 0.0677 & 0.0860 & 0.0796 & 0.1017 & \underline{0.1029} & 0.1010 & \textbf{0.1070} & 3.98\% \\
+Office & NDCG@5  & 0.0220 & 0.0444 & 0.0621 & 0.0552 & 0.0742 & 0.0760 & \underline{0.0781} & \textbf{0.0807} & 3.33\% \\
+Office & NDCG@10 & 0.0254 & 0.0485 & 0.0662 & 0.0592 & 0.0791 & 0.0806 & \underline{0.0818} & \textbf{0.0850} & 3.91\% \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}
